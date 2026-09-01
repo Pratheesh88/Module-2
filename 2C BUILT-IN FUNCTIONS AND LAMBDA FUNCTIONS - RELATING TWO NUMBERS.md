@@ -1,44 +1,47 @@
-# Exp.No:2c
-## BUILT-IN FUNCTIONS AND LAMBDA FUNCTIONS - RELATING TWO NUMBERS
+# Exp.No:2d
+## LOOPING PATTERNS - PRINTING PATTERN
 
 ---
 
 ### AIM  
-To write a Python program to check the relation between two numbers — whether one number is greater than, equal to, or lesser than another — using a lambda function.
+To write a Python program to print a triangular star pattern using loops.
 
 ---
 
 ### ALGORITHM
 
 1. Begin the program.  
-2. Use `eval()` to get two numbers (`num1` and `num2`) from the user.  
-3. Define a lambda function `max` that takes two arguments `x` and `y`.  
-4. The lambda function compares the numbers and prints:
-   - If `x > y`, then it prints: "`num2` is smaller than `num1`".
-   - Otherwise, it prints: "`num1` is smaller than `num2`".
-5. Call the lambda function by passing `num1` and `num2` as arguments.  
-6. Terminate the program.
+2. Read the integer `n` from the user using `input()`. This will determine the number of rows in the pattern.  
+3. Initialize a variable `i = 0`. This will help adjust the spacing before the stars.  
+4. Loop through rows from `0` to `n - 1`:  
+   - For each row, calculate the number of spaces to print using the formula: `((n - rows - 1) * 2) + i`.  
+   - Print the calculated number of spaces using `print(" ", end="")`.  
+   - Increment `i` by 1 after each row.  
+   - Print stars using a nested loop: the number of stars in each row is `rows + 1`, printed using `print("*", end="  ")`.  
+   - Print a newline after each row using `print("")` to move to the next line.  
+5. Terminate the program.
 
- 
+---
 
 ### PROGRAM
 ```
-#Reg.No -212223060205
-#Name- PRATHEESH G
+#Reg.No: 212223060205
+#Name: PRATHEESH G
 
-x=int(input())
-y=int(input())
-if(x<y):
-    print(x,"is smaller than",y)
-else:
-    print(y,"is smaller than",x)
+a=int(input())
+m=(2*a)-2
+for i in range(0,a):
+    for j in range(0,m):
+        print(end=" ")
+    m=m-1
+    for j in range(0,i+1):
+        print("* ",end=" ")
+    print()
 ```
 
 ### OUTPUT
-![image](https://github.com/user-attachments/assets/d96fd7f8-8ce3-4eb4-bd10-ce7f27652f7d)
-
-
+![image](https://github.com/user-attachments/assets/d9b1870e-d80b-4481-987c-741e3785bc7e)
 
 
 ### RESULT
-Thus a a Python program to check the relation between two numbers — whether one number is greater than, equal to, or lesser than another — using a lambda function was executed successfully.
+Thus a Python program to print a triangular star pattern using loops was executed and implemented successfully.
